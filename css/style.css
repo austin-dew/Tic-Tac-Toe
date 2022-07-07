@@ -31,15 +31,28 @@ body {
 }
 
 #boardContainer {
-     height: 500px;
+     height: 600px;
      width: 100%;
      display: flex;
-     justify-content: center;
-     margin-top: 100px;
+     flex-direction: column;
+     align-items: center;
+}
+
+#boardState {
+
+}
+
+#resetBtn {
+     border: 2px solid cyan;
+     background: lightgray;
+     margin-top: 50px;
+     padding: 5px 25px;
+     font-weight: bold;
 }
 
 #board {
-     width: 30%;
+     height: 550px;
+     min-width: 501px;
      border: 2px solid cyan;
      display: flex;
      flex-wrap: wrap;
@@ -57,6 +70,13 @@ body {
      font-size: 1.5rem;
 }
 
-.tile:hover {
+.tile:hover, #resetBtn:hover {
      background: lightblue;
+}
+
+@media screen and (max-width: 1200px) {
+     #board {
+          width: 50%;
+          min-width: 350px
+     }
 }
